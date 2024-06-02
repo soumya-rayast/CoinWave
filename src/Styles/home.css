@@ -18,7 +18,7 @@
 
 .hero p{
     width: 75%;
-    color: #e3e3e3;
+    color: yellow;
     line-height: 1.5;
 }
 .hero form{
@@ -41,8 +41,8 @@
 }
 .hero form button{
    border: none;
-   background: #7927ff;
-   color: white;
+   background: yellow;
+   color: black;
    font-size: 16px;
    padding: 10px 30px;
    border-radius: 5px;
@@ -51,7 +51,8 @@
 .crypto-table{
     max-width: 800px;
     margin: auto;
-    background: linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15));
+    border: 2px solid yellow;
+    background: rgb(42, 40, 40);
     border-radius: 15px;
 }
 .layout{

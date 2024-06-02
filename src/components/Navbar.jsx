@@ -3,7 +3,7 @@ import logo from "../../src/assets/logo.png"
 import arrow_icon from "../../src/assets/arrow_icon.png"
 import { useContext } from "react"
 import { CoinContext } from "../context/CoinContext"
-
+import { Link } from "react-router-dom"
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
   const currencyHandler = (e) => {
@@ -20,7 +20,7 @@ const Navbar = () => {
         setCurrency({ name: "eur", symbol: "€" })
         break;
       }
-      default : {
+      default: {
         setCurrency({ name: "inr", symbol: "₹" })
         break;
       }
@@ -29,13 +29,13 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav-left">
-        <img src={logo} alt="logo.png" className="logo" />
+        <Link to={'/'}> <img src={logo} alt="logo.png" className="logo" /></Link>
         <p>
           CoinWave
         </p>
       </div>
       <ul>
-        <li>Home</li>
+        <Link to={'/'}><li>Home</li></Link>
         <li>Features</li>
         <li>Pricing</li>
         <li>Blog</li>
