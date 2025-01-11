@@ -1,8 +1,11 @@
 .Home {
-    padding: 0px 10px;
+    padding: 10px;
     padding-bottom: 100px;
+    background-color: #121212;
+    color: #ffffff;
 }
 
+/* Hero Section */
 .hero {
     max-width: 600px;
     margin: 80px auto;
@@ -12,99 +15,157 @@
     text-align: center;
     gap: 30px;
 }
-.hero h1{
-    font-size: max(4vw,36px);
+
+.hero-title {
+    font-size: max(4vw, 36px);
+    color: #ffd700;
 }
 
-.hero p{
+.hero-description {
     width: 75%;
-    color: yellow;
-    line-height: 1.5;
+    color: #f0e68c;
+    line-height: 1.6;
+    justify-self: center;
 }
-.hero form{
-    padding: 8px;
-    width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    font-size: 20px;
+form{
     display: flex;
-    justify-content: space-between;
+    justify-self: center;
+}
+.search-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 40px;
+}
+
+.search-input {
+
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #121212;
+    background: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-button:hover {
+    background: #ffdd4a;
+}
+
+/* Crypto Table Section */
+.crypto-table {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #ffd700;
+}
+
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.table-header {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #292929;
+}
+
+.table-body .table-row {
+    transition: background 0.3s ease;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.table-body .table-row:hover {
+    background-color: #292929;
+}
+
+.coin-details {
+    display: flex;
     align-items: center;
     gap: 10px;
 }
-.hero form input{
-    flex: 1;
-    font-size: 16px;
-    outline: none;
-    border: none;
-    padding-left: 10px;
+
+.coin-image {
+    width: 35px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 2px;
 }
-.hero form button{
-   border: none;
-   background: yellow;
-   color: black;
-   font-size: 16px;
-   padding: 10px 30px;
-   border-radius: 5px;
-   cursor: pointer;
-}
-.crypto-table{
-    max-width: 800px;
-    margin: auto;
-    border: 2px solid yellow;
-    background: rgb(42, 40, 40);
-    border-radius: 15px;
-}
-.layout{
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr ;
-    padding: 15px 20px;
-    align-items: center;
-    border-bottom: 1ps solid #3c3c3c;
-}
-.change{
+
+.change-green {
+    color: #28a745;
     text-align: center;
 }
-.market-cap{
+
+.change-red {
+    color: #dc3545;
+    text-align: center;
+}
+
+.market-cap {
     text-align: right;
 }
-.layout:last-child{
-    border: none;
-}
-.layout div{
-    display: flex;
-    align-items: center;
-}
-.layout div img{
-    width: 35px;
-}
-.layout .green {
-    color: green;
-    text-align: center;
-}
-.layout .red{
-    color: red;
-    text-align: center;
-}
 
-/* media queries */
-
-@media(max-width:770px){
-    .layout{
-        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+/* Media Queries */
+@media (max-width: 770px) {
+    .table-header,
+    .table-row {
+        grid-template-columns: 0.5fr 2.5fr 1fr 1fr;
     }
-    .market-cap{
+    .market-cap {
         display: none;
     }
 }
-@media(max-width:500px){
-    .layout div img{
+
+@media (max-width: 500px) {
+    .coin-image {
         width: 25px;
     }
-    .layout{
-        font-size: 13px;
+    .table-header,
+    .table-row {
+        font-size: 12px;
+        padding: 10px;
     }
-    .hero form input{
+    .hero {
+        gap: 20px;
+    }
+    .search-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search-input,
+    .search-button {
         width: 100%;
     }
 }
