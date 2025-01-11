@@ -1,8 +1,14 @@
-# React + Vite
+## Coinwave 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ **UI Preview**
+- Home Page
+  
+![image](https://github.com/user-attachments/assets/f8fc3dd2-5216-4675-975f-1a66db323cb7)
 
-Currently, two official plugins are available:
+- Crypto Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/user-attachments/assets/81fee23e-9776-4681-8b8d-aef7d89f1aa8)
+
+- Responsive
+
+![image](https://github.com/user-attachments/assets/acae0848-c97c-4bb8-9aca-06e1cb3420cf)
